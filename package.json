@@ -1,5 +1,5 @@
 {
-  "name": "replace-string",
+  "name": "concat-string",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/frabert/replace-string-action.git"
+    "url": "git+https://github.com/greguintow/concat-string-action.git"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/frabert/replace-string-action/issues"
+    "url": "https://github.com/greguintow/concat-string-action/issues"
   },
-  "homepage": "https://github.com/frabert/replace-string-action#readme",
+  "homepage": "https://github.com/greguintow/concat-string-action#readme",
   "dependencies": {
     "@actions/core": "^1.2.0",
     "@actions/github": "^1.1.0"

@@ -1,18 +1,12 @@
-name: 'Replace string'
-author: 'Francesco Bertolaccini'
-description: 'Use regular expressions to manipulate strings'
+name: 'Concat string'
+author: 'Greg Teixeira'
+description: 'Concatenate strings and map them'
 inputs:
-  pattern:
-    description: 'Regular expression pattern'
-    required: true
   string:
     description: 'The input string'
     required: true
-  replace-with:
-    description: 'What to replace with'
-    required: true
-  flags:
-    description: 'Flags to use when matching'
+  map:
+    description: 'Map strings'
     required: false
 outputs:
   replaced:
