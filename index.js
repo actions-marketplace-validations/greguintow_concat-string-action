@@ -1,19 +1,17 @@
 const core = require('@actions/core')
 
 try {
-	// {([^}]+){1,}}
-	// (?<={)(.*)(?=})
-	const re = /{([^}]+){1,}}/g
+	const re = /{([^}]+){1,}}/
+	const globalRe = new RegExp(re, 'g')
 	const string = core.getInput('string')
-	// const map = core.
-	const ids = [...string.matchAll(re)].map(match => match[1])
-	// console.log(map)
-	console.log(ids)
-	ids.forEach(id => {
-		console.log(process.env[id])
+	const ids = [...string.matchAll(globalRe)].map(match => match.slice(0, 2))
+	let finalString = string
+	ids.forEach(([toReplace, id]) => {
+		const mappedId = process.env[id]
+		finalString = finalString.replace(toReplace, mappedId || id)
 	})
 
-	core.setOutput('replaced', string)
+	core.setOutput('replaced', finalString)
 } catch (error) {
 	core.setFailed(error.message)
 }

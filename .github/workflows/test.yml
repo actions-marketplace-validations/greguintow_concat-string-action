@@ -11,8 +11,9 @@ jobs:
         uses: ./
         id: test
         env:
-          master: daora
+          master: prod
+          staging: stg
         with:
-          string: 'Test {master}'
+          string: 'Env-{master}-{staging}'
       - name: Check equality
         run: 'echo ${{ steps.test.outputs.replaced }}'
