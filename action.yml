@@ -5,9 +5,6 @@ inputs:
   string:
     description: 'The input string'
     required: true
-  map:
-    description: 'Map strings'
-    required: false
 outputs:
   replaced:
     description: 'The output string'

@@ -7,7 +7,7 @@ try {
 	const string = core.getInput('string')
 	// const map = core.
 	const ids = [...string.matchAll(re)].map(match => match[1])
-	console.log(map)
+	// console.log(map)
 	console.log(ids)
 	ids.forEach(id => {
 		console.log(process.env[id])
